@@ -1,0 +1,48 @@
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+.lists {
+  @apply  w-full grid   gap-10 px-5 md:grid-cols-3 sm:grid-cols-1;
+}
+.list {
+  @apply border border-[#c5c5c5] md:w-full  sm:w-[50%] sm:mx-auto rounded-md shadow-md;
+}
+.list h1 {
+  @apply border-b border-black text-center p-1 tracking-widest capitalize;
+}
+.form {
+  @apply flex justify-center items-center p-2 gap-3;
+}
+.form input {
+  @apply border border-black;
+}
+.form button {
+  @apply bg-green-500 p-2 rounded-ss-md rounded-ee-md font-semibold transition-all text-white hover:bg-transparent hover:border-2 hover:text-black;
+}
+.options::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  right: -1px;
+  /* border-left: 10px solid transparent; */
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ececec;
+  border-top-left-radius: 2px;
+}
+.options button {
+  @apply capitalize 
+}
+body {
+  user-select: none;
+  padding: 20px;
+}
+.task-done:hover .delete-From-Done {
+  display: inline-block;
+  width: 100%;
+}
+.task-done{
+transition: 2s;
+}
